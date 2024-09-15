@@ -1,3 +1,4 @@
+
 const apiUrl = 'https://semana16.vercel.app/burger';
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector('.container-cart-products');
@@ -147,3 +148,4 @@ function showHTML() {
 function saveAllProducts() {
     localStorage.setItem('allProducts', JSON.stringify(allProducts));
 }
+
