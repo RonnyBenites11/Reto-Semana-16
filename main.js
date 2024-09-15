@@ -74,6 +74,7 @@ function fetchProducts() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(burger => {
+			productsList.innerHTML = '';
             burger.forEach(product => {
                 const productHTML = `
                     <div class="item">
@@ -89,7 +90,10 @@ function fetchProducts() {
                 `;
                 productsList.innerHTML += productHTML;
             });
-        });
+			
+        })
+		.catch(error => console.error('Error fetching products:', error));
+		
 }
 
 // Función para mostrar productos en el carrito
