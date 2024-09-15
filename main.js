@@ -1,3 +1,4 @@
+const apiUrl = 'https://semana16.vercel.app/burger';
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector('.container-cart-products');
 
@@ -69,10 +70,10 @@ rowProduct.addEventListener('click', (e) => {
 });
 
 function fetchProducts() {
-    fetch('https://semana16.vercel.app/burger')
+    fetch(apiUrl)
         .then(response => response.json())
-        .then(data => {
-            data.forEach(product => {
+        .then(burger => {
+            burger.forEach(product => {
                 const productHTML = `
                     <div class="item">
 						<figure>
